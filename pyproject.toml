@@ -1,0 +1,12 @@
+[project]
+name = "party-organiser"
+version = "0.1.0"
+description = "experiment in HTMX, FastAPI and Tailwind"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "alembic==1.14",
+    "fastapi[standard]==0.115.11",
+    "pytest==8.3",
+    "sqlmodel==0.0.24",
+]
