@@ -208,3 +208,6 @@ __marimo__/
 
 # database files
 *.db
+
+# nodejs files
+node_modules/
