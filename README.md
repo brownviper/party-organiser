@@ -19,3 +19,7 @@ export PYTHONPATH=${PWD}:$PYTHONPATH
 
 ## set PYTHONPATH - windows
 set PYTHONPATH=C:\me\Courses\party_app;%PYTHONPATH
+
+
+## tips
+HTMX is "JavaScript for people who don't want to use JavaScript"
