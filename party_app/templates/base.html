@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Party!</title>
+
+    <link href="{{ url_for('static', path='css/output.css') }}" rel="stylesheet">
     <script type="text/javascript" src="{{ url_for('static', path='js/htmx.min.js') }}"></script>
 </head>
-<body>
-<main>
-    {% block content %}
-    {% endblock %}
-</main>
+<body class="bg-custom-powder-light">
+    <nav class="bg-custom-red">
+        <a href="/"
+           class="inline-block p-4 text-custom-powder-light font-dancing-script text-2xl"
+        >
+            My parties
+        </a>
+    </nav>
+    <main class="container p-5 m-auto">
+        {% block content %}
+        {% endblock %}
+    </main>
 </body>
 </html>
