@@ -13,3 +13,9 @@ sqlite3
 .open database.db
 .tables
 ```
+
+## set PYTHONPATH - macOS/Linux
+export PYTHONPATH=${PWD}:$PYTHONPATH
+
+## set PYTHONPATH - windows
+set PYTHONPATH=C:\me\Courses\party_app;%PYTHONPATH
