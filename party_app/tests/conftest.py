@@ -36,6 +36,8 @@ def client_fixture(session: Session):
 @pytest.fixture(scope="session")
 def create_party():
     def _create_party(session: Session, **kwargs):
+        print(f"--- with {kwargs.get("party_date")}")
+        print(f"--- with {kwargs.get("party_time")}")
         party = Party(
             party_date=kwargs.get("party_date", date.today()),
             party_time=kwargs.get("party_time", datetime.now().time()),
