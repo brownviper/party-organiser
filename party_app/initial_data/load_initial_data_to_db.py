@@ -62,6 +62,7 @@ def load_initial_data_party_child(json_file, model):
 
 
 if __name__ == "__main__":
+    print("--- loading data")
     clear_all_tables()
     load_initial_data_party(Path(__file__).parent.absolute() / "initial_parties.json", Party)
     load_initial_data_party_child(Path(__file__).parent.absolute() / "initial_gifts.json", Gift)

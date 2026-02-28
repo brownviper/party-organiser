@@ -18,4 +18,5 @@ run-tailwind:
 	npm run tailwind:dev
 
 test:
-	python -m pytest "party_app/tests" -vv
+	python -m pytest "party_app/tests" -rP -vv -p no:warnings
+

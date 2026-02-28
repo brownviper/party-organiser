@@ -29,3 +29,6 @@ Tailwind CSS is a utility-first CSS framework. In a utility-first approach, each
 
  Alpine.js is a lightweight JavaScript framework. It only has 15 attributes (e.g., x-data), 6 properties (e.g., $el), and 2 methods (e.g., Alpine.data) as of writing. While HTMX focuses on interaction with your server, Alpine covers client-side state and operations.
  
+
+ The click-to-edit pattern is an elementary yet powerful feature of HTMX. With it, you can provide an effortless feeling for editing a record.
+ 
