@@ -32,3 +32,6 @@ Tailwind CSS is a utility-first CSS framework. In a utility-first approach, each
 
  The click-to-edit pattern is an elementary yet powerful feature of HTMX. With it, you can provide an effortless feeling for editing a record.
  
+## swagger docs
+* [swagger docs](http://localhost:8000/docs)
+***
