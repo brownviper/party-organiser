@@ -20,4 +20,3 @@ run-tailwind:
 test:
 	python -m pytest "party_app/tests" -rP -vv -p no:warnings
 
-
