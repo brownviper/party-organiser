@@ -1,0 +1,15 @@
+<div class="table-row">
+    <div class="table-cell py-4 px-6 text-gray-900">{{ gift.gift_name }}</div>
+    <div class="table-cell py-4 px-6">{{ gift.price|default("/", true) }}</div>
+    <div class="table-cell py-4 px-6">{{ gift.link|default("/", true)|urlize(trim_url_limit=30, target="_blank") }}
+    </div>
+    <div class="table-cell py-4 px-6">
+        <button type="submit"
+                hx-get="{{ url_for('gift_update_partial', party_id=party.uuid, gift_id=gift.uuid) }}"
+                hx-target="closest .table-row"
+                hx-swap="outerHTML"
+        >
+            Edit
+        </button>
+    </div>
+</div>
