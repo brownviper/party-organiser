@@ -12,4 +12,14 @@
             Edit
         </button>
     </div>
+    <div class="table-cell py-4 px-6">
+        <button type="button"
+                hx-target="closest .table-row"
+                hx-swap="outerHTML"
+                hx-confirm="Are you sure?"
+                hx-delete="{{ url_for('gift_remove_partial', party_id=party.uuid, gift_id=gift.uuid) }}"
+        >
+            Delete
+        </button>
+    </div>
 </div>
