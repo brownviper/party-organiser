@@ -3,7 +3,7 @@ from typing import Callable
 
 from fastapi import status
 from fastapi.testclient import TestClient
-from sqlmodel import Session
+from sqlmodel import Session, select
 
 from party_app.main import app
 from party_app.models import Gift, Party
@@ -94,3 +94,20 @@ def test_gift_update_save_partial_updates_gift_and_returns_its_details_including
     assert gift.link == updated_data["link"]
     assert gift.party_id == party.uuid
     assert response.context["party"] == party
+
+
+def test_partial_gift_delete_removes_gift(
+        session: Session,
+        client: TestClient,
+        create_party: Callable[..., Party],
+        create_gift: Callable[..., Gift],
+):
+    party = create_party(session=session)
+    gift = create_gift(session=session, party=party)
+
+    assert len(session.exec(select(Gift).where(Gift.party_id == party.uuid)).all()) == 1
+
+    url = app.url_path_for("gift_remove_partial", party_id=party.uuid, gift_id=gift.uuid)
+    client.delete(url)
+
+    assert len(session.exec(select(Gift).where(Gift.party_id == party.uuid)).all()) == 0
