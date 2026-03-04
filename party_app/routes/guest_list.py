@@ -53,8 +53,8 @@ def mark_guests_attending_partial(
 
     return templates.TemplateResponse(
         request=request,
-        name="guest_list/partial_guest_list.html",
-        context={"guests": guests}
+        name="guest_list/partial_guest_filter_and_list.html", # CHANGED
+        context={"party_id": party_id, "guests": guests} # CHANGED
     )
 
 
@@ -82,8 +82,8 @@ def mark_guests_not_attending_partial(
 
     return templates.TemplateResponse(
         request=request,
-        name="guest_list/partial_guest_list.html",
-        context={"guests": guests}
+        name="guest_list/partial_guest_filter_and_list.html", # CHANGED
+        context={"party_id": party_id, "guests": guests} # CHANGED
     )
 
 
