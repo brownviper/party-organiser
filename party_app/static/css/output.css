@@ -197,11 +197,26 @@
   .visible {
     visibility: visible;
   }
+  .absolute {
+    position: absolute;
+  }
   .fixed {
     position: fixed;
   }
+  .relative {
+    position: relative;
+  }
   .static {
     position: static;
+  }
+  .bottom-8 {
+    bottom: calc(var(--spacing) * 8);
+  }
+  .bottom-full {
+    bottom: 100%;
+  }
+  .left-10 {
+    left: calc(var(--spacing) * 10);
   }
   .col-span-2 {
     grid-column: span 2 / span 2;
@@ -310,6 +325,9 @@
   }
   .w-\[40px\] {
     width: 40px;
+  }
+  .w-\[60px\] {
+    width: 60px;
   }
   .w-full {
     width: 100%;
@@ -481,6 +499,12 @@
   }
   .text-\[10px\] {
     font-size: 10px;
+  }
+  .text-\[15px\] {
+    font-size: 15px;
+  }
+  .text-\[20px\] {
+    font-size: 20px;
   }
   .leading-tight {
     --tw-leading: var(--leading-tight);
