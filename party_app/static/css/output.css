@@ -323,6 +323,9 @@
   .w-4 {
     width: calc(var(--spacing) * 4);
   }
+  .w-\[4h0px\] {
+    width: 4h0px;
+  }
   .w-\[40px\] {
     width: 40px;
   }

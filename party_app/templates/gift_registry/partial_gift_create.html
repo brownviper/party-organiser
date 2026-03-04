@@ -2,6 +2,8 @@
       hx-post="{{ url_for('gift_create_partial', party_id=party_id) }}"
       hx-target="this"
       hx-swap="outerHTML"
+      x-data
+      x-ref="new_gift_form"
 >
     <div class="table-cell py-4 px-6 text-gray-900">
         <input type="text" id="gift_name" name="gift_name" maxlength="100" required
@@ -21,6 +23,12 @@
     <div class="table-cell py-4 px-6">
         <button type="submit">
             Add
+        </button>
+    </div>
+
+    <div class="table-cell py-4 px-6">
+        <button type="button" @click="$refs.new_gift_form.remove()">
+            Cancel
         </button>
     </div>
 </form>
