@@ -20,4 +20,9 @@ run-tailwind:
 test:
 	python -m pytest "party_app/tests" -rP -vv -p no:warnings
 
-
+remove-all-containers:
+	docker container prune
+	docker image prune -a -f
+	docker volume prune -a -f
+	docker builder prune
+	docker system df

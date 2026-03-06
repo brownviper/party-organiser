@@ -1,3 +1,10 @@
+# clearing containers and images
+docker system df
+docker container prune
+docker image prune -a -f
+docker volume prune -a -f
+docker builder prune
+
 # party-organiser
 and experiment in FastAPI, HTMX and Tailwind
 ```
