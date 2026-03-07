@@ -20,9 +20,17 @@ run-tailwind:
 test:
 	python -m pytest "party_app/tests" -rP -vv -p no:warnings
 
-remove-all-containers:
+wipe-all-containers:
 	docker container prune
 	docker image prune -a -f
 	docker volume prune -a -f
 	docker builder prune
 	docker system df
+
+start-containers:
+	docker build . -t party_organizer
+	docker run -d -p 8000:8000 --name party_app -e PORT=8000 party_organizer
+
+start-containers-with-uv:
+	docker build . -t party_organizer -f Dockerfile-uv
+# 	docker run -d -p 8000:8000 --name party_app -e PORT=8000 party_organizer
